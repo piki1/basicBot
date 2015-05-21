@@ -3109,7 +3109,7 @@
                             }
                             else return API.sendChat(subChat(basicBot.chat.unmuteeveryonerank, {name: chat.un}));
                         }
-                         **/
+                         
                         var from = chat.un;
                         var name = msg.substr(cmd.length + 2);
 
@@ -3119,7 +3119,7 @@
 
                         var permUser = basicBot.userUtilities.getPermission(user.id);
                         if (permFrom > permUser) {
-                            /*
+                            
                              var muted = basicBot.room.mutedUsers;
                              var wasMuted = false;
                              var indexMuted = -1;
@@ -3133,7 +3133,7 @@
                              if (!wasMuted) return API.sendChat(subChat(basicBot.chat.notmuted, {name: chat.un}));
                              basicBot.room.mutedUsers.splice(indexMuted);
                              API.sendChat(subChat(basicBot.chat.unmuted, {name: chat.un, username: name}));
-                             */
+                             
                             try {
                                 API.moderateUnmuteUser(user.id);
                                 API.sendChat(subChat(basicBot.chat.unmuted, {name: chat.un, username: name}));

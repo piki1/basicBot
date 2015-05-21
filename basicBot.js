@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/piki1/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -183,9 +183,9 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/piki1/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/piki1/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -193,7 +193,7 @@
         settings: {
             botName: "PICK BOT :heart:",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/piki1/basicBot/master/lang/en.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
@@ -1313,7 +1313,7 @@
                 },
              **/
 
-            activeCommand: {
+            /*activeCommand: {
                 command: 'active',
                 rank: 'bouncer',
                 type: 'startsWith',
@@ -1825,7 +1825,7 @@
                 }
             },
 
-            /*deletechatCommand: {
+            deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
                 type: 'startsWith',
@@ -1869,7 +1869,7 @@
                 }
             },*/
 
-            emojiCommand: {
+            /*emojiCommand: {
                 command: 'emoji',
                 rank: 'user',
                 type: 'exact',
@@ -2469,7 +2469,7 @@
                         else return API.sendChat(subChat(basicBot.chat.invalidtime, {name: chat.un}));
                     }
                 }
-            },
+            },*/
 
             motdCommand: {
                 command: 'motd',
@@ -2495,7 +2495,7 @@
                 }
             },
 
-            moveCommand: {
+            /*moveCommand: {
                 command: 'move',
                 rank: 'mod',
                 type: 'startsWith',
@@ -2581,7 +2581,7 @@
                              }
                              }, time * 60 * 1000, user.id);
                              }
-                             */
+                             
                             if (time > 45) {
                                 API.sendChat(subChat(basicBot.chat.mutedmaxtime, {name: chat.un, time: "45"}));
                                 API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
@@ -3227,7 +3227,7 @@
                         }
                     }
                 }
-            },
+            },*/
 
             welcomeCommand: {
                 command: 'welcome',
@@ -3249,7 +3249,7 @@
                 }
             },
 
-            websiteCommand: {
+            /*websiteCommand: {
                 command: 'website',
                 rank: 'user',
                 type: 'exact',
@@ -3364,7 +3364,7 @@
                 }
             }
         }
-    };
+    };*/
 
     loadChat(basicBot.startup);
 }).call(this);
